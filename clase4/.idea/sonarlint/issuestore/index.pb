@@ -9,3 +9,11 @@ c
 3src/com/backend/clase/proxy/VacunatorioService.java,0\8\082ea60b812145fb63beef3dc35e6ab26bb36f43
 d
 4src/com/backend/clase/test/VacunatorioProxyTest.java,d\e\de1584f272c08f6794e2138d33165e2e243cf1f5
+Y
+)src/com/backend/mesas/proxy/Descarga.java,f\a\fa6487d6765730ebb7b87ed86c956629f518ace0
+^
+.src/com/backend/mesas/proxy/ProxyDescarga.java,a\f\afdf32949e7d69532371864727fe864f2e28a5a5
+a
+1src/com/backend/mesas/proxy/ServicioDescarga.java,3\1\3144ef98e6c3d252f0b684098adf017554e5d8f3
+\
+,src/com/backend/mesas/test/DescargaTest.java,1\c\1c12f7e091ccb0faeb3c2b8a004c0f92112f684a
