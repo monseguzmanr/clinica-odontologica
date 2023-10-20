@@ -35,7 +35,7 @@ public class Animal {
             //recorrer el resultado
             while (resultSet.next()){
 
-                LOGGER.info("Animal: " + resultSet.getString("nombre") + " - " + resultSet.getString(3));
+                LOGGER.info("Animal: " + resultSet.getInt(1) + " - " + resultSet.getString("nombre") + " - " + resultSet.getString(3));
             }
 
             //eliminar uno

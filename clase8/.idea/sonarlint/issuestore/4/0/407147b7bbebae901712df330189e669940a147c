@@ -1,0 +1,10 @@
+
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ûø°ùÿÿÿÿ8åµåÔ´1
+e
+java:S2259:"HA "NullPointerException" could be thrown; "connection" is nullable here.(ôêÂœ8ôşéÔ´1
+i
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(é°Áµşÿÿÿÿ8õşéÔ´1
+J
+java:S4925E"-Remove this "Class.forName()", it is useless.(›‡ªœ8˜ÿéÔ´1
+X
+java:S6437G"6Revoke and change this password, as it is compromised.(™Š’òøÿÿÿÿ8šÿéÔ´1
