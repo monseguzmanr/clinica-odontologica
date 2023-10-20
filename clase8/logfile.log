@@ -1,0 +1,14 @@
+[2023-10-19 22:07:42] [ INFO ] [Animal:38] Animal: Firulais - Perro
+[2023-10-19 22:07:42] [ INFO ] [Animal:38] Animal: Lola - Vaca
+[2023-10-19 22:07:42] [ INFO ] [Animal:38] Animal: Homero - Perro
+[2023-10-19 22:07:42] [ INFO ] [Animal:38] Animal: Pepe - Sapo
+[2023-10-19 22:07:42] [ INFO ] [Animal:38] Animal: Tuki - Loro
+[2023-10-19 22:07:42] [ INFO ] [Animal:43] ----------------------------------------------------------------
+[2023-10-19 22:07:42] [ INFO ] [Animal:49] Animal: Lola - Vaca
+[2023-10-19 22:07:42] [ INFO ] [Animal:49] Animal: Homero - Perro
+[2023-10-19 22:07:42] [ INFO ] [Animal:49] Animal: Pepe - Sapo
+[2023-10-19 22:07:42] [ INFO ] [Animal:49] Animal: Tuki - Loro
+[2023-10-19 22:09:27] [ ERROR] [Animal:54] org.h2.Driver
+[2023-10-19 22:09:27] [ ERROR] [Animal:60] Cannot invoke "java.sql.Connection.close()" because "connection" is null
+[2023-10-19 22:10:53] [ ERROR] [Animal:55] org.h2.Driver
+[2023-10-19 22:10:53] [ ERROR] [Animal:61] Cannot invoke "java.sql.Connection.close()" because "connection" is null
