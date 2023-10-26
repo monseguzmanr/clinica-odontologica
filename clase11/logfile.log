@@ -1,0 +1,36 @@
+[2023-10-26 20:50:34] [ ERROR] [PacienteDaoH2:95] Table "PACIENTES" not found (this database is empty); SQL statement:
+SELECT * FROM PACIENTES [42104-222]
+[2023-10-26 20:50:35] [ ERROR] [DomicilioDaoH2:48] Table "DOMICILIOS" not found (this database is empty); SQL statement:
+INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES (?, ?, ?, ?) [42104-222]
+[2023-10-26 20:50:35] [ INFO ] [DomicilioDaoH2:53] Tuvimos un problema
+[2023-10-26 20:50:35] [ ERROR] [DomicilioDaoH2:54] Table "DOMICILIOS" not found (this database is empty); SQL statement:
+INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES (?, ?, ?, ?) [42104-222]
+[2023-10-26 20:50:35] [ ERROR] [PacienteDaoH2:50] Table "PACIENTES" not found (this database is empty); SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, DNI, FECHA, DOMICILIO_ID) VALUES (?, ?, ?, ?, ?) [42104-222]
+[2023-10-26 20:50:35] [ INFO ] [PacienteDaoH2:55] Tuvimos un problema
+[2023-10-26 20:50:35] [ ERROR] [PacienteDaoH2:56] Table "PACIENTES" not found (this database is empty); SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, DNI, FECHA, DOMICILIO_ID) VALUES (?, ?, ?, ?, ?) [42104-222]
+[2023-10-26 20:50:58] [ ERROR] [PacienteDaoH2:95] Table "PACIENTES" not found (this database is empty); SQL statement:
+SELECT * FROM PACIENTES [42104-222]
+[2023-10-26 20:50:58] [ ERROR] [DomicilioDaoH2:48] Table "DOMICILIOS" not found (this database is empty); SQL statement:
+INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES (?, ?, ?, ?) [42104-222]
+[2023-10-26 20:50:58] [ INFO ] [DomicilioDaoH2:53] Tuvimos un problema
+[2023-10-26 20:50:58] [ ERROR] [DomicilioDaoH2:54] Table "DOMICILIOS" not found (this database is empty); SQL statement:
+INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES (?, ?, ?, ?) [42104-222]
+[2023-10-26 20:50:58] [ ERROR] [PacienteDaoH2:50] Table "PACIENTES" not found (this database is empty); SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, DNI, FECHA, DOMICILIO_ID) VALUES (?, ?, ?, ?, ?) [42104-222]
+[2023-10-26 20:50:58] [ INFO ] [PacienteDaoH2:55] Tuvimos un problema
+[2023-10-26 20:50:58] [ ERROR] [PacienteDaoH2:56] Table "PACIENTES" not found (this database is empty); SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, DNI, FECHA, DOMICILIO_ID) VALUES (?, ?, ?, ?, ?) [42104-222]
+[2023-10-26 20:51:31] [ ERROR] [PacienteDaoH2:95] Table "PACIENTES" not found (this database is empty); SQL statement:
+SELECT * FROM PACIENTES [42104-222]
+[2023-10-26 20:51:31] [ ERROR] [DomicilioDaoH2:48] Table "DOMICILIOS" not found (this database is empty); SQL statement:
+INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES (?, ?, ?, ?) [42104-222]
+[2023-10-26 20:51:31] [ INFO ] [DomicilioDaoH2:53] Tuvimos un problema
+[2023-10-26 20:51:31] [ ERROR] [DomicilioDaoH2:54] Table "DOMICILIOS" not found (this database is empty); SQL statement:
+INSERT INTO DOMICILIOS (CALLE, NUMERO, LOCALIDAD, PROVINCIA) VALUES (?, ?, ?, ?) [42104-222]
+[2023-10-26 20:51:31] [ ERROR] [PacienteDaoH2:50] Table "PACIENTES" not found (this database is empty); SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, DNI, FECHA, DOMICILIO_ID) VALUES (?, ?, ?, ?, ?) [42104-222]
+[2023-10-26 20:51:31] [ INFO ] [PacienteDaoH2:55] Tuvimos un problema
+[2023-10-26 20:51:31] [ ERROR] [PacienteDaoH2:56] Table "PACIENTES" not found (this database is empty); SQL statement:
+INSERT INTO PACIENTES (NOMBRE, APELLIDO, DNI, FECHA, DOMICILIO_ID) VALUES (?, ?, ?, ?, ?) [42104-222]
