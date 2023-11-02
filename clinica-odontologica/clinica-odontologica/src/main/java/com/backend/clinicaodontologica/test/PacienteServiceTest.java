@@ -1,29 +1,29 @@
-package com.backend.test;
+package com.backend.clinicaodontologica.test;
 
-import com.backend.dao.impl.PacienteDaoH2;
-import com.backend.model.Domicilio;
-import com.backend.model.Paciente;
-import com.backend.service.PacienteService;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import com.backend.clinicaodontologica.dao.impl.PacienteDaoH2;
+import com.backend.clinicaodontologica.model.Domicilio;
+import com.backend.clinicaodontologica.model.Paciente;
+import com.backend.clinicaodontologica.service.PacienteService;
+import org.junit.Test;
+
 import java.time.LocalDate;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 
 class PacienteServiceTest {
     private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
 
+    /*
 
     @BeforeAll
     static void doBefore() {
         Connection connection = null;
         try {
             Class.forName("org.h2.Driver");
-            connection = DriverManager.getConnection("jdbc:h2:~/testClase11;INIT=RUNSCRIPT FROM 'create.sql'", "sa", "sa");
+            connection = DriverManager.getConnection("jdbc:h2:~/c1Clinica;INIT=RUNSCRIPT FROM 'create.sql'", "sa", "sa");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -34,7 +34,8 @@ class PacienteServiceTest {
                 ex.printStackTrace();
             }
         }
-    }
+    }*/
+
 
     @Test
     void deberiaAgregarUnPaciente(){
@@ -43,7 +44,7 @@ class PacienteServiceTest {
 
         Paciente pacienteRegistrado = pacienteService.registrarPaciente(paciente);
 
-        Assertions.assertTrue(pacienteRegistrado.getId() != 0);
+       assertTrue(pacienteRegistrado.getId() != 0);
 
     }
 

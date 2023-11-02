@@ -17,13 +17,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class PacienteServiceTest {
     private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
 
+    /*
 
     @BeforeAll
     static void doBefore() {
         Connection connection = null;
         try {
             Class.forName("org.h2.Driver");
-            connection = DriverManager.getConnection("jdbc:h2:~/testClase11;INIT=RUNSCRIPT FROM 'create.sql'", "sa", "sa");
+            connection = DriverManager.getConnection("jdbc:h2:~/c1Clinica;INIT=RUNSCRIPT FROM 'create.sql'", "sa", "sa");
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -34,7 +35,8 @@ class PacienteServiceTest {
                 ex.printStackTrace();
             }
         }
-    }
+    }*/
+
 
     @Test
     void deberiaAgregarUnPaciente(){
