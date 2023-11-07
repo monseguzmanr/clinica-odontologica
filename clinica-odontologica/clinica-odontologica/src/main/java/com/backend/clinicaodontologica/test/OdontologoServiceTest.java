@@ -5,7 +5,7 @@ package com.backend.clinicaodontologica.test;
 
 import com.backend.clinicaodontologica.dao.impl.OdontologoDaoH2;
 import com.backend.clinicaodontologica.model.Odontologo;
-import com.backend.clinicaodontologica.service.OdontologoService;
+import com.backend.clinicaodontologica.service.impl.OdontologoService;
 import org.junit.Test;
 
 import java.util.List;

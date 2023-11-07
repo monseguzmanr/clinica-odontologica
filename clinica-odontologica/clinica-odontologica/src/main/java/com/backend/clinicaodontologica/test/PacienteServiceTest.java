@@ -4,7 +4,8 @@ package com.backend.clinicaodontologica.test;
 import com.backend.clinicaodontologica.dao.impl.PacienteDaoH2;
 import com.backend.clinicaodontologica.model.Domicilio;
 import com.backend.clinicaodontologica.model.Paciente;
-import com.backend.clinicaodontologica.service.PacienteService;
+
+import com.backend.clinicaodontologica.service.impl.PacienteService;
 import org.junit.Test;
 
 import java.time.LocalDate;
