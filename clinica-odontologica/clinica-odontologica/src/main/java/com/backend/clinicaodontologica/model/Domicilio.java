@@ -1,6 +1,10 @@
 package com.backend.clinicaodontologica.model;
 
+import org.springframework.web.bind.annotation.RestController;
+
 public class Domicilio {
+
+    //json -> dto Controlador dto -> servicio dto -> entidad -> repository (dao) -> entidad a BD -> repositoy -> servicio entidad a dto -> controlador -> dto @ResposeBody (dentro de @RestController) -> json
     private int id;
     private String calle;
     private int numero;

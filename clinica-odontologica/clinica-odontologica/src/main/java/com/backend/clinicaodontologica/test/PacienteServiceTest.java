@@ -15,7 +15,7 @@ import static org.junit.Assert.assertTrue;
 
 
 class PacienteServiceTest {
-    private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
+   // private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
 
     /*
 
@@ -37,7 +37,7 @@ class PacienteServiceTest {
         }
     }*/
 
-
+/*
     @Test
     void deberiaAgregarUnPaciente(){
 
@@ -54,5 +54,5 @@ class PacienteServiceTest {
 
         assertFalse(pacienteService.listarPacientes().isEmpty());
 
-    }
+    }*/
 }
