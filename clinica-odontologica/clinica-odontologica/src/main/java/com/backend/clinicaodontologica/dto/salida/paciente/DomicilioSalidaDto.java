@@ -1,25 +1,17 @@
-package com.backend.clinicaodontologica.model;
+package com.backend.clinicaodontologica.dto.salida.paciente;
 
-import org.springframework.web.bind.annotation.RestController;
-
-public class Domicilio {
-
-    //json -> dto Controlador dto -> servicio dto -> entidad -> repository (dao) -> entidad a BD -> repositoy -> servicio entidad a dto -> controlador -> dto @ResposeBody (dentro de @RestController) -> json
+public class DomicilioSalidaDto {
     private int id;
     private String calle;
     private int numero;
     private String localidad;
     private String provincia;
 
-    public Domicilio(int id, String calle, int numero, String localidad, String provincia) {
-        this.id = id;
-        this.calle = calle;
-        this.numero = numero;
-        this.localidad = localidad;
-        this.provincia = provincia;
+    public DomicilioSalidaDto() {
     }
 
-    public Domicilio(String calle, int numero, String localidad, String provincia) {
+    public DomicilioSalidaDto(int id, String calle, int numero, String localidad, String provincia) {
+        this.id = id;
         this.calle = calle;
         this.numero = numero;
         this.localidad = localidad;
@@ -65,6 +57,4 @@ public class Domicilio {
     public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
-
-
 }
