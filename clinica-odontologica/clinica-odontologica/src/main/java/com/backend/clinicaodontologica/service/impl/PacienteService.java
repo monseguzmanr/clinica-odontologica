@@ -56,7 +56,7 @@ public class PacienteService implements IPacienteService {
         //    pacienteSalidaDtos.add(pacienteSalidaDto);
         //}
 
-        LOGGER.info("Listado de todos los pacientes: {}", pacientesSalidaDto);
+        LOGGER.info("Listado de todos los pacientes: {}", JsonPrinter.toString(pacientesSalidaDto));
         return pacientesSalidaDto;
     }
 
@@ -67,7 +67,7 @@ public class PacienteService implements IPacienteService {
 
         if(pacienteBuscado != null){
             pacienteEncontrado =  modelMapper.map(pacienteBuscado, PacienteSalidaDto.class);
-            LOGGER.info("Paciente encontrado: {}", pacienteEncontrado);
+            LOGGER.info("Paciente encontrado: {}", JsonPrinter.toString(pacienteEncontrado));
         } else LOGGER.error("El id no se encuentra registrado en la base de datos");
 
         return pacienteEncontrado;
