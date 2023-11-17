@@ -1,21 +1,8 @@
-package com.backend.clinicaodontologica.test;
-
-
-import com.backend.clinicaodontologica.dao.impl.PacienteDaoH2;
-import com.backend.clinicaodontologica.model.Domicilio;
-import com.backend.clinicaodontologica.model.Paciente;
-
-import com.backend.clinicaodontologica.service.impl.PacienteService;
-import org.junit.Test;
-
-import java.time.LocalDate;
-
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+package com.backend.clinicaodontologica.service;
 
 
 class PacienteServiceTest {
-   // private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
+    // private PacienteService pacienteService = new PacienteService(new PacienteDaoH2());
 
     /*
 

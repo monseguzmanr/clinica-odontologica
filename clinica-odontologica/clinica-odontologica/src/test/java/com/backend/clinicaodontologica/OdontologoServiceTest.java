@@ -1,10 +1,8 @@
-package com.backend.clinicaodontologica.test;
-
-
+package com.backend.clinicaodontologica;
 
 
 import com.backend.clinicaodontologica.dao.impl.OdontologoDaoH2;
-import com.backend.clinicaodontologica.model.Odontologo;
+import com.backend.clinicaodontologica.entity.Odontologo;
 import com.backend.clinicaodontologica.service.impl.OdontologoService;
 import org.junit.Test;
 
@@ -12,8 +10,6 @@ import java.util.List;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
-
 
 
 class OdontologoServiceTest {
