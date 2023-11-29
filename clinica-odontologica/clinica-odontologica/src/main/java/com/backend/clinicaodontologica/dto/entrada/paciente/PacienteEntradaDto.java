@@ -17,7 +17,7 @@ public class PacienteEntradaDto {
     private String nombre;
 
     @Size(max = 50, message = "El apellido debe tener hasta 50 caracteres")
-    @NotNull(message = "El apellido del paciente no puede ser nulo")
+
     @NotBlank(message = "Debe especificarse el apellido del paciente")
     private String apellido;
 
