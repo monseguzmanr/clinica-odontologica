@@ -8,6 +8,8 @@ import java.time.LocalDateTime;
 
 public class TurnoModificacionEntradaDto {
 
+    @NotNull(message = "Debe proveerse el id del turno que se desea modificar")
+    private Long id;
     @NotNull(message = "El paciente no puede ser nulo")
     private Long paciente;
 
@@ -19,13 +21,19 @@ public class TurnoModificacionEntradaDto {
     @NotNull(message = "Debe especificarse la fecha y hora del turno")
     private LocalDateTime fechaYHora;
 
-    public TurnoModificacionEntradaDto() {
-    }
-
-    public TurnoModificacionEntradaDto(Long paciente, Long odontologo, LocalDateTime fechaYHora) {
+    public TurnoModificacionEntradaDto(Long id, Long paciente, Long odontologo, LocalDateTime fechaYHora) {
+        this.id = id;
         this.paciente = paciente;
         this.odontologo = odontologo;
         this.fechaYHora = fechaYHora;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getPaciente() {
