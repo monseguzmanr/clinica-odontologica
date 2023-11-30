@@ -2,12 +2,18 @@ package com.backend.clinicaodontologica.service.impl;
 
 import com.backend.clinicaodontologica.dto.entrada.turno.TurnoEntradaDto;
 import com.backend.clinicaodontologica.dto.modificacion.TurnoModificacionEntradaDto;
+import com.backend.clinicaodontologica.dto.salida.odontologo.OdontologoSalidaDto;
 import com.backend.clinicaodontologica.dto.salida.paciente.PacienteSalidaDto;
+import com.backend.clinicaodontologica.dto.salida.turno.OdontologoTurnoSalidaDto;
+import com.backend.clinicaodontologica.dto.salida.turno.PacienteTurnoSalidaDto;
 import com.backend.clinicaodontologica.dto.salida.turno.TurnoSalidaDto;
+import com.backend.clinicaodontologica.entity.Odontologo;
+import com.backend.clinicaodontologica.entity.Paciente;
 import com.backend.clinicaodontologica.entity.Turno;
 import com.backend.clinicaodontologica.exceptions.ResourceNotFoundException;
 import com.backend.clinicaodontologica.repository.TurnoRepository;
 import com.backend.clinicaodontologica.service.ITurnoService;
+import com.backend.clinicaodontologica.utils.JsonPrinter;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,18 +40,26 @@ public class TurnoService implements ITurnoService {
 
     @Override
     public TurnoSalidaDto registrarTurno(TurnoEntradaDto turnoEntrada) throws ResourceNotFoundException {
+        Turno turnoAPersistir = new Turno();
 
-        if(pacienteService.buscarPacientePorId(turnoEntrada.getPaciente()) == null) {
+        PacienteSalidaDto pacienteSalidaDto = pacienteService.buscarPacientePorId(turnoEntrada.getPaciente());
+        if(pacienteSalidaDto == null) {
             LOGGER.error("No se ha encontrado el paciente con id {}", turnoEntrada.getPaciente());
             throw new ResourceNotFoundException("No se ha encontrado el paciente con id " + turnoEntrada.getPaciente());
         }
 
-        if(odontologoService.buscarOdontologoPorId(turnoEntrada.getOdontologo()) == null) {
+        turnoAPersistir.setPaciente(modelMapper.map(pacienteSalidaDto, Paciente.class));
+
+        OdontologoSalidaDto odontologoSalidaDto = odontologoService.buscarOdontologoPorId(turnoEntrada.getOdontologo());
+        if(odontologoSalidaDto == null) {
             LOGGER.error("No se ha encontrado el odontologo con id {}", turnoEntrada.getPaciente());
             throw new ResourceNotFoundException("No se ha encontrado el odontologo con id " + turnoEntrada.getPaciente());
         }
 
-        Turno turno = turnoRepository.save(modelMapper.map(turnoEntrada, Turno.class));
+        turnoAPersistir.setOdontologo(modelMapper.map(odontologoSalidaDto, Odontologo.class));
+        turnoAPersistir.setFechaYHora(turnoEntrada.getFechaYHora());
+        Turno turno = turnoRepository.save(turnoAPersistir);
+
         return modelMapper.map(turno, TurnoSalidaDto.class);
 
     }
@@ -54,7 +68,14 @@ public class TurnoService implements ITurnoService {
     public List<TurnoSalidaDto> listarTurnos() {
         return turnoRepository
                 .findAll()
-                .stream().map(o -> modelMapper.map(o, TurnoSalidaDto.class))
+                .stream().map(turno -> {
+
+                    TurnoSalidaDto turnoSalidaDto = modelMapper.map(turno, TurnoSalidaDto.class);
+                    turnoSalidaDto.setOdontologoTurnoSalidaDto(modelMapper.map(turno.getOdontologo(), OdontologoTurnoSalidaDto.class));
+                    turnoSalidaDto.setPacienteTurnoSalidaDto(modelMapper.map(turno.getPaciente(), PacienteTurnoSalidaDto.class));
+                    return turnoSalidaDto;
+
+                })
                 .toList();
     }
 
@@ -75,5 +96,23 @@ public class TurnoService implements ITurnoService {
             throw new ResourceNotFoundException("No fue posible actualizar los datos ya que el turno no se encuentra registrado con ID  " + turnoModificacionEntradaDto.getId());
         }
         return modelMapper.map(turnoRepository.save(turnoRecibido), TurnoSalidaDto.class);
+    }
+
+    @Override
+    public TurnoSalidaDto buscarTurnoPorId(Long id) {
+        Turno turnoBuscado = turnoRepository.findById(id).orElse(null);
+        TurnoSalidaDto turnoEncontrado = null;
+
+        if (turnoBuscado != null) {
+
+            turnoEncontrado = modelMapper.map(turnoBuscado, TurnoSalidaDto.class);
+            turnoEncontrado.setOdontologoTurnoSalidaDto(modelMapper.map(turnoBuscado.getOdontologo(), OdontologoTurnoSalidaDto.class));
+            turnoEncontrado.setPacienteTurnoSalidaDto(modelMapper.map(turnoBuscado.getPaciente(), PacienteTurnoSalidaDto.class));
+            LOGGER.info("Turno encontrado: {}", JsonPrinter.toString(turnoEncontrado));
+
+
+        } else LOGGER.error("El id no se encuentra registrado en la base de datos");
+
+        return turnoEncontrado;
     }
 }

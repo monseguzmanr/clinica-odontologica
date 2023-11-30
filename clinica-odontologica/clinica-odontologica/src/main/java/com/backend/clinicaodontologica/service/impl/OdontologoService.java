@@ -53,7 +53,6 @@ public class OdontologoService implements IOdontologoService {
                 .map(o -> modelMapper.map(o, OdontologoSalidaDto.class)).toList();
 
         LOGGER.info("Listado de todos los odontologos: {}", odontologos);
-
         return odontologos;
     }
 

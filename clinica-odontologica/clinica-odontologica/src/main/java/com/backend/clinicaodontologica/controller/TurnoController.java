@@ -1,8 +1,6 @@
 package com.backend.clinicaodontologica.controller;
 
-import com.backend.clinicaodontologica.dto.entrada.odontologo.OdontologoEntradaDto;
 import com.backend.clinicaodontologica.dto.entrada.turno.TurnoEntradaDto;
-import com.backend.clinicaodontologica.dto.modificacion.OdontologoModificacionEntradaDto;
 import com.backend.clinicaodontologica.dto.modificacion.TurnoModificacionEntradaDto;
 import com.backend.clinicaodontologica.dto.salida.odontologo.OdontologoSalidaDto;
 import com.backend.clinicaodontologica.dto.salida.turno.TurnoSalidaDto;
@@ -63,7 +61,7 @@ public class TurnoController {
         return new ResponseEntity<>(turnoService.actualizarTurno(turno), HttpStatus.OK);
     }
 
-    @GetMapping()
+    @GetMapping("listar")
     @Operation(summary = "Listado de todos los turnos")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado de turnos obtenido correctamente",
@@ -94,5 +92,22 @@ public class TurnoController {
     public ResponseEntity<?> eliminarTurno(@PathVariable Long id) throws ResourceNotFoundException {
         turnoService.eliminarTurno(id);
         return new ResponseEntity<>("Turno eliminado correctamente", HttpStatus.NO_CONTENT);
+    }
+
+    @Operation(summary = "Búsqueda de un turno por Id")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Turno obtenido correctamente",
+                    content = {@Content(mediaType = "application/json",
+                            schema = @Schema(implementation = TurnoSalidaDto.class))}),
+            @ApiResponse(responseCode = "400", description = "Id inválido",
+                    content = @Content),
+            @ApiResponse(responseCode = "404", description = "Turno no encontrado",
+                    content = @Content),
+            @ApiResponse(responseCode = "500", description = "Server error",
+                    content = @Content)
+    })
+    @GetMapping("{id}")
+    public ResponseEntity<TurnoSalidaDto> obtenerTurnoPorId(@PathVariable Long id) {
+        return new ResponseEntity<>(turnoService.buscarTurnoPorId(id), HttpStatus.OK);
     }
 }

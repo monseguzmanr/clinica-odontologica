@@ -85,7 +85,7 @@ public class OdontologoController {
     }
 
 
-    @GetMapping()
+    @GetMapping("listar")
     @Operation(summary = "Listado de todos los odontólogos")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listado de odontólogos obtenido correctamente",
