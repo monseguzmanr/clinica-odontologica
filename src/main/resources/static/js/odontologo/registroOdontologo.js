@@ -54,7 +54,7 @@ window.addEventListener("load", function () {
 });
 
       function mostrarModal(mensaje) {
-        const modal = document.getElementById('miModal');
+        const modal = document.getElementById('responseModal');
         const modalMensaje = modal.querySelector('.modal-body');
         modalMensaje.textContent = mensaje;
         const miModal = new bootstrap.Modal(modal);

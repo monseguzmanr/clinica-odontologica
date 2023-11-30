@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+main {
+    margin-top: 20px;
+}
 
 :root{
     --navbar: #004173;
@@ -26,18 +29,7 @@ body {
     display: none;
 }
 
-label{
-    color: #fff;
-    font-size: 12px;
-    margin-top: 10px;
-}
-
 .form-body {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    text-align: center;
     height: 90vh;
 }
 
@@ -184,32 +176,7 @@ select{
 .valid-feedback{
     color: #2acc80;
 }
-#edit{
-    color: #2acc3d;
-    cursor: pointer;
-    &:hover{
-        color: #92cc99;
-    }
-}
 
-
-#delete{
-    color: #f90116;
-    cursor: pointer;
-    &:hover{
-        color: #fa616e;
-    }
-}
-
-.table{
-    background-color: var(--form);
-    color: #ffff;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    border-radius: 10px;
-}
 
 button{
     background-color: transparent;

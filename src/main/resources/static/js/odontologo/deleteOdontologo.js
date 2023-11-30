@@ -20,7 +20,6 @@ function deleteBy(id){
             console.log(data);
             let row_id = "#tr_" + id;
             document.querySelector(row_id).remove();
-            mostrarModal("Odontologo eliminado")
             setTimeout(() => {
                  window.location.reload();
              }, 2000);
@@ -31,16 +30,16 @@ function deleteBy(id){
 
 function mostrarModal(mensaje) {
 
-  const modal = document.getElementById('miModal');
+  const modal = document.getElementById('responseModal');
   const modalMensaje = modal.querySelector('.modal-body');
   modalMensaje.textContent = mensaje;
   const miModal = new bootstrap.Modal(modal);
   miModal.show();
+
 }
 
 function mostrarModalConfirmacion(mensaje, callback) {
   const modal = document.getElementById('miModalConfirmacion');
-
   const modalMensaje = modal.querySelector('.modal-body');
   modalMensaje.textContent = mensaje;
   const btnAceptar = modal.querySelector('#btnAceptar');
