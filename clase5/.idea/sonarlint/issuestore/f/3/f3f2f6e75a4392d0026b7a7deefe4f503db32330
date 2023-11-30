@@ -1,18 +1,0 @@
-
-m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ€ø8´µÊÿ³1
-U
-java:S1854"8Remove this useless assignment to local variable "mac8".(ŸÓ«¦8ÅµÊÿ³1
-[
-java:S1854">Remove this useless assignment to local variable "windows2_1".(ƒ€ø8ÃµÊÿ³1
-[
-java:S1854	"9Remove this useless assignment to local variable "mac16".(êæø‚şÿÿÿÿ8ïÊÿ³1
-^
-java:S1854"<Remove this useless assignment to local variable "windows2".(Â¿Ëúüÿÿÿÿ8ÆµÊÿ³1
-O
-java:S1481"-Remove this unused "windows2" local variable.(Â¿Ëúüÿÿÿÿ8ÎµÊÿ³1
-L
-java:S1481	"*Remove this unused "mac16" local variable.(êæø‚şÿÿÿÿ8ÒµÊÿ³1
-L
-java:S1481"/Remove this unused "windows2_1" local variable.(ƒ€ø8ÖµÊÿ³1
-F
-java:S1481")Remove this unused "mac8" local variable.(ŸÓ«¦8³²Ôÿ³1
