@@ -91,6 +91,10 @@ public class TurnoService implements ITurnoService {
     @Override
     public TurnoSalidaDto actualizarTurno(TurnoModificacionEntradaDto turnoModificacionEntradaDto) throws ResourceNotFoundException {
         Turno turnoRecibido = modelMapper.map(turnoModificacionEntradaDto, Turno.class);
+
+        turnoRecibido.setOdontologo(modelMapper.map(odontologoService.buscarOdontologoPorId(turnoModificacionEntradaDto.getOdontologo()), Odontologo.class));
+        turnoRecibido.setPaciente(modelMapper.map(pacienteService.buscarPacientePorId(turnoModificacionEntradaDto.getPaciente()), Paciente.class));
+
         if(turnoRepository.findById(turnoModificacionEntradaDto.getId()).isEmpty()) {
             LOGGER.error("No fue posible actualizar los datos ya que el turno no se encuentra registrado");
             throw new ResourceNotFoundException("No fue posible actualizar los datos ya que el turno no se encuentra registrado con ID  " + turnoModificacionEntradaDto.getId());

@@ -24,7 +24,7 @@ function deleteBy(id) {
             let row_id = "#tr_" + id;
             document.querySelector(row_id).remove();
             //mostramos un mensaje de confirmación de eliminación
-            mostrarModal("Odontologo eliminado")
+
             setTimeout(() => {
                  window.location.reload();
              }, 2000);
@@ -38,7 +38,7 @@ function deleteBy(id) {
 function mostrarModal(mensaje) {
     // Función para mostrar un modal
   // Selecciona el modal
-  const modal = document.getElementById('miModal');
+  const modal = document.getElementById('responseModal');
 
   // Actualiza el mensaje en el modal
   const modalMensaje = modal.querySelector('.modal-body');
