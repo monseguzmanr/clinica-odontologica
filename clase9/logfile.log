@@ -1,4 +1,0 @@
-[2023-10-24 20:52:04] [ INFO ] [Transaccion:65] Cuenta, nombre = Lu', numeroCuenta = 26596, saldo = 
-[2023-10-24 20:53:02] [ INFO ] [Transaccion:65] Cuenta, nombre = Lu', numeroCuenta = 26596, saldo = 50025.0
-[2023-10-24 20:56:11] [ ERROR] [Transaccion:75] / by zero
-[2023-10-24 20:56:11] [ ERROR] [Transaccion:80] / by zero
